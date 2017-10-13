@@ -53,13 +53,23 @@ app.use(hotMiddleware)
 Object.keys(proxyTable).forEach(function (context) {
   const options = proxyTable[context]
   if (typeof options === 'string') {
-    options = { target: options }
+     options = {target: options}
   }
   app.use(proxyMiddleware(options.filter || context, options))
 })
 
 // handle fallback for HTML5 history API
-app.use(require('connect-history-api-fallback')())
+app.use(require('connect-history-api-fallback')({
+  rewrites: [
+    {from: /\.html$/, to: '/index.html'},
+    {
+      from: /.*?\.(js)|(css)$/,
+      to: (context) => {
+        return context.parsedUrl.pathname;
+      }
+    }
+  ]
+}))
 
 // serve webpack bundle output
 app.use(devMiddleware)
