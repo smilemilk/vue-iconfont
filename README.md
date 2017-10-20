@@ -1,6 +1,6 @@
 # vue-iconf
 
-> A Vue.js project
+> iconfont字体图标 引用的小demo
 
 ## Build Setup
 
@@ -14,17 +14,14 @@ npm run dev
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+``` bash
 
-# run unit tests
-npm run unit
+# iconfont 项目应用
+1、引入iconfont四个文件
+2、在通往主文件的任意文件中，引入对应的iconfont.css文件的路径，如 src/plugins/plugin-core.js文件 通过ES6 import引入
+import '../assets/iconfont/iconfont.css'
 
-# run e2e tests
-npm run e2e
+``` bash
 
-# run all tests
-npm test
-```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+

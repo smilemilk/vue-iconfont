@@ -7,6 +7,7 @@
 import Router from 'vue-router'
 import Promise from 'promise-polyfill'
 import iView from 'iview'
+import '../assets/iconfont/iconfont.css'
 
 export default {
   defineVueProp (Vue) {
