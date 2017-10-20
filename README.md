@@ -19,9 +19,10 @@ npm run build
 
 ``` bash
 
-> 1、引入iconfont四个文件
+1、引入iconfont四个文件
 
-> 2、在通往主文件的任意文件中，引入对应的iconfont.css文件的路径，# 如src/plugins/plugin-core.js路径文件中，通过ES6 import引入
-import '../assets/iconfont/iconfont.css'
+2、在通往主文件的任意文件中，引入对应的iconfont.css文件的路径，# 如src/plugins/plugin-core.js路径文件中，通过ES6 import引入
+
+# import '../assets/iconfont/iconfont.css'
 ```
 
